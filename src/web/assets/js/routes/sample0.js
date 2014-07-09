@@ -8,6 +8,11 @@ var m = require('./../components/m/m.js');
 var PubSub = require('./../components/p/p.js');
 //var $ = require('jquery');
 
+require('bootstrap-datetimepicker');
+require('chosen');
+
+var L = require('leaflet');
+
 var home = {};
 
 //here's the view
@@ -74,6 +79,7 @@ home.view = function(ctrl) {
 		ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
 		fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
 		deserunt mollit anim id est laborum."
+
 
 		</div>
 

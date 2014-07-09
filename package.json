@@ -1,0 +1,60 @@
+{
+	"name": "bootstrap-mobile",
+	"version": "0.0.1",
+	"devDependencies": {
+		"gulp": "latest",
+		"bower": "latest",
+        "run-sequence":"latest",
+        "gulp-shell":"0.2.7",
+
+		"gulp-sass": "0.7.1",
+		"node-bourbon": "1.0.0",
+
+		"express": "latest",
+		"connect-livereload": "latest",
+
+		"gulp-uglify":"latest",
+		"gulp-concat":"latest",
+
+		"browserify": "latest",
+		"browserify-shim": "latest",
+		"exorcist": "latest",
+		"vinyl-source-stream": "latest",
+
+		"gulp-jshint": "latest",
+
+		"gulp-iconfont": "latest",
+
+		"cordova":"~3.5.0",
+		"through" :"~2.3.4",
+		"msx": "~0.1.3",
+		"jsxhint":"~0.4.11"
+
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"browser": {
+		"velocity": "./src/web/vendor/velocity/jquery.velocity.min.js",
+		"velocity-ui": "./src/web/vendor/velocity/velocity.ui.js",
+		"modernizr": "./src/web/vendor/modernizr/modernizr.js",
+		"iscroll": "./src/web/vendor/iscroll/build/iscroll.js",
+		"fastclick": "./src/web/vendor/fastclick/lib/fastclick.js",
+		"leaflet": "./src/web/vendor/leaflet/dist/leaflet-src.js",
+		"mithril": "./src/web/vendor/mithril/mithril.js",
+		"moment": "./src/web/vendor/moment/moment.js",
+		"bootstrap-datetimepicker": "./src/web/vendor/bootstrap3-datetimepicker/src/js/bootstrap-datetimepicker.js",
+		"chosen": "./src/web/vendor/chosendist/chosen.jquery.js",
+		"pubsub-js": "./src/web/vendor/pubsub-js/src/pubsub.js",
+		"threejs": "./src/web/vendor/threejs/build/three.js"
+	},
+	"browserify": {
+		"transform": [
+			"browserify-shim"
+		]
+	},
+	"browserify-shim": {
+		"jquery": "global:$",
+		"moment":"global:moment"
+	}
+}

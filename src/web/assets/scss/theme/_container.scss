@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.fullfixed {
+  //position: fixed;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container-xx .userview {
+  top: 44px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 230px;
+}
+
+.container-xs .userview,
+.container-sm .userview {
+  width: 100%;;
+}
+
+.container-xx .systembar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top:0;
+  height: 44px;
+  box-sizing: border-box;
+  z-index: 1001;
+}
+
+/*.container-xs .systembar,*/
+/*.container-sm .systembar {*/
+/*left: 0;*/
+/*}*/
+
+.container-xx .systemmenu {
+  display: none;
+  top: 44px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 230px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container-xs .systemmenu,
+.container-sm .systemmenu {
+  left: 0;
+}
+
+.container-xx .viewbar {
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 330px;
+  height: 44px;
+  box-sizing: border-box;
+  z-index: 1002;
+
+}
+
+.container-xs .viewbar,
+.container-sm .viewbar {
+  left: 100px;
+}
+
+/*.viewcontent {
+  top: 44px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  left: 230px;
+}
+
+.container-xs .viewcontent,
+.container-sm .viewcontent {
+  left: 0;
+}
+*/
+.views {
+  margin-left: 230px;
+}
+
+.container-xs .views,
+.container-sm .views {
+  margin-left: 0px;
+}
+
+
+.systembar-bg {
+  background-color: #2c3e50;
+}
+
+.userview {
+  background-color: #34495e;
+}
+
+
+.nav-second-level li a {
+  padding: 7px 10px 7px 10px;
+  padding-left: 52px;
+  color: #A7B1C2;
+  text-decoration: none;
+}
+
+.opensystemmenu .views
+{
+  display: none;
+}
+
+.opensystemmenu .systemmenu {
+  display: block !important;
+}
+
+.container-xs.openusermenu .views,
+.container-sm.openusermenu .views {
+  display: none;
+}
+
+.container-xs.openusermenu .userview,
+.container-sm.openusermenu .userview {
+  display: block !important;
+}
+
+.touch .row {
+  margin: 0;
+}

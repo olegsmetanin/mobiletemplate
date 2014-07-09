@@ -1,0 +1,21 @@
+{
+  "name": "structuredway-com-website",
+  "version": "0.0.1",
+  "dependencies": {
+  	"bootstrap-sass-official": "~3.1.1",
+  	"font-awesome": "~4.1.0",
+  	"jquery": "~1.11.1",
+	"velocity": "~0.0.12",
+	"iscroll": "~5.1.1",
+	"modernizr": "~2.8.2",
+	"ckeditor": "~4.4.1",
+	"fastclick": "~1.0.2",
+	"leaflet": "~0.7.3",
+	"mithril": "~0.1.18",
+	"moment": "~2.7.0",
+	"bootstrap3-datetimepicker":"~3.0.0",
+	"chosendist": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
+	"chosen": "~1.1.0",
+	"pubsub-js":"~1.4.2"
+  }
+}

@@ -4,20 +4,21 @@
 
 var home = {};
 
-//here's the view
 home.view = function(ctrl) {
 	/*jshint ignore:start */
-	return 	<div class="view" style="display: block;margin: 0;padding: 0;">
+	return [
+		<div class="view">
 
-		<div class="viewbar noscroll" style="color:#FFF;line-height: 40px;overflow: hidden;">
-			Home page
+			<div class="view-bar noscroll" style="">
+				Home page
+			</div>
+
+			<div class="view-content scroll" style="">
+				Home page 			<a href="/sample1" config={m.route}>sample1</a>
+			</div>
+
 		</div>
-
-		<div class="viewcontent scroll" style="background-color: #ecf0f1;">
-			Home page
-		</div>
-
-	</div>
+	]
 	/*jshint ignore:end */
 };
 

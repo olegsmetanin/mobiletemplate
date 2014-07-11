@@ -28,7 +28,9 @@
 		"cordova":"~3.5.0",
 		"through" :"~2.3.4",
 		"msx": "~0.1.3",
-		"jsxhint":"~0.4.11"
+		"jsxhint":"~0.4.11",
+
+		"three":"~0.67.0"
 
 	},
 	"engines": {
@@ -45,8 +47,7 @@
 		"moment": "./src/web/vendor/moment/moment.js",
 		"bootstrap-datetimepicker": "./src/web/vendor/bootstrap3-datetimepicker/src/js/bootstrap-datetimepicker.js",
 		"chosen": "./src/web/vendor/chosendist/chosen.jquery.js",
-		"pubsub-js": "./src/web/vendor/pubsub-js/src/pubsub.js",
-		"threejs": "./src/web/vendor/threejs/build/three.js"
+		"pubsub-js": "./src/web/vendor/pubsub-js/src/pubsub.js"
 	},
 	"browserify": {
 		"transform": [

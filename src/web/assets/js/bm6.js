@@ -14,13 +14,13 @@ if (window.device && window.device.available) {
 }
 
 function deviceready() {
-	$(function () {
+	$(function() {
 		init();
 	});
 }
 
 
-var init = function () {
+var init = function() {
 
 	FastClick(document.body);
 
@@ -35,13 +35,13 @@ var init = function () {
 	}, false);
 
 
-	$(document).on('touchmove', '.noscroll', function (evt) {
+	$(document).on('touchmove', '.noscroll', function(evt) {
 		event.preventDefault();
 	});
 
 	var listenForScroll;
 
-	$(document).on('touchend', '.scroll', function (evt) {
+	$(document).on('touchend', '.scroll', function(evt) {
 		listenForScroll = true;
 	});
 
@@ -49,25 +49,25 @@ var init = function () {
 	var timer;
 	var scroll;
 
-	$('.scroll').on('scroll', function (evt) {
+	$('.scroll').on('scroll', function(evt) {
 
-		var trg= evt.target;
+		var trg = evt.target;
 
 		if (!Modernizr.touch) {
 
 
-		if (trg.className.indexOf('scrollbar') == -1) {
-			trg.className += ' scrollbar';
-		}
+			if (trg.className.indexOf('scrollbar') == -1) {
+				trg.className += ' scrollbar';
+			}
 
-		if (timer) {
-			clearTimeout(timer);
-		}
+			if (timer) {
+				clearTimeout(timer);
+			}
 
 
-		timer = setTimeout(function () {
-			$(trg).removeClass('scrollbar');
-		},500);
+			timer = setTimeout(function() {
+				$(trg).removeClass('scrollbar');
+			}, 500);
 		}
 
 
@@ -80,16 +80,16 @@ var init = function () {
 			clearTimeout(scroll);
 		}
 
-		scroll = setTimeout(function () {
+		scroll = setTimeout(function() {
 			$(trg).removeClass('onscroll');
-		},500);
+		}, 500);
 
-		if(listenForScroll){
-			var height =parseInt(window.getComputedStyle(this).height, 10);
-			if((this.scrollTop+height) === height){
+		if (listenForScroll) {
+			var height = parseInt(window.getComputedStyle(this).height, 10);
+			if ((this.scrollTop + height) === height) {
 				this.scrollTop = 1;
 				listenForScroll = false;
-			} else if(this.scrollTop+height === this.scrollHeight){
+			} else if (this.scrollTop + height === this.scrollHeight) {
 				this.scrollTop -= 1;
 			}
 		} else {
@@ -97,45 +97,45 @@ var init = function () {
 		}
 	});
 
-	var resize = function () {
-		$('.container-xx, .container-embd-xx').each(function (i,node) {
-		var el = $(node);
-		var width = el.width();
-		if (width<750) {
-			el.addClass('container-xs');
-			el.removeClass('container-sm');
-			el.removeClass('container-md');
-			el.removeClass('container-lg');;
-		} else if (width<970) {
-			el.removeClass('container-xs');
-			el.addClass('container-sm');
-			el.removeClass('container-md');
-			el.removeClass('container-lg');
-		} else if (width<1170) {
-			el.removeClass('container-xs');
-			el.removeClass('container-sm');
-			el.addClass('container-md');
-			el.removeClass('container-lg');
-		} else {
-			el.removeClass('container-xs');
-			el.removeClass('container-sm');
-			el.removeClass('container-md');
-			el.addClass('container-lg');
-		}
+	var resize = function() {
+		$('.container-xx, .container-embd-xx').each(function(i, node) {
+			var el = $(node);
+			var width = el.width();
+			if (width < 750) {
+				el.addClass('container-xs');
+				el.removeClass('container-sm');
+				el.removeClass('container-md');
+				el.removeClass('container-lg');;
+			} else if (width < 970) {
+				el.removeClass('container-xs');
+				el.addClass('container-sm');
+				el.removeClass('container-md');
+				el.removeClass('container-lg');
+			} else if (width < 1170) {
+				el.removeClass('container-xs');
+				el.removeClass('container-sm');
+				el.addClass('container-md');
+				el.removeClass('container-lg');
+			} else {
+				el.removeClass('container-xs');
+				el.removeClass('container-sm');
+				el.removeClass('container-md');
+				el.addClass('container-lg');
+			}
 
-		var contentWidth = (width < 970 ? width : width-230);
+			var contentWidth = (width < 970 ? width : width - 230);
 
-			if (contentWidth<750) {
+			if (contentWidth < 750) {
 				el.addClass('content-xs');
 				el.removeClass('content-sm');
 				el.removeClass('content-md');
 				el.removeClass('content-lg');
-			} else if (contentWidth<970) {
+			} else if (contentWidth < 970) {
 				el.removeClass('content-xs');
 				el.addClass('content-sm');
 				el.removeClass('content-md');
 				el.removeClass('content-lg');
-			} else if (contentWidth<1170) {
+			} else if (contentWidth < 1170) {
 				el.removeClass('content-xs');
 				el.removeClass('content-sm');
 				el.addClass('content-md');
@@ -151,18 +151,18 @@ var init = function () {
 		});
 	};
 
-	$(window).resize(function () {
+	$(window).resize(function() {
 		resize();
 	});
 
 	resize();
 
-	$('.container-xx, .container-embd-xx').each(function (i,node) {
+	$('.container-xx, .container-embd-xx').each(function(i, node) {
 		layout(node);
 	});
 
 };
 
-module.exports = function () {
+module.exports = function() {
 
 }

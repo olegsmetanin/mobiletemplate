@@ -96,26 +96,28 @@ home.controller = function() {
 		//that.state(new Date());
 		//$('#qwe').attr('hello', 'hello');
 		//console.log( "Home controller publish" );
-//		m.startComputation();
-		PubSub.publish( 'MY TOPIC', new Date() );
+		//		m.startComputation();
+		PubSub.publish('MY TOPIC', new Date());
 
 	}
 
-	PubSub.subscribe( 'MY TOPIC', function( msg, data ){
+	PubSub.subscribe('MY TOPIC', function(msg, data) {
 		that.state(data);
-//		m.endComputation();
+		//		m.endComputation();
 		m.redraw();
 
 		//console.log( msg, data );
-	} );
+	});
 
-	setTimeout(function () {
+	setTimeout(function() {
 		if (!(window.device && window.device.available)) {
-			$('#datetimepicker1').attr('type','text');
+			$('#datetimepicker1').attr('type', 'text');
 			$('#datetimepicker1').datetimepicker();
 		}
 
-		$(".chosen-select").chosen({disable_search_threshold: 10});
+		$(".chosen-select").chosen({
+			disable_search_threshold: 10
+		});
 		$(".chosen-select").append('<option value="United States">United States</option>');
 		$('.chosen-select').trigger("chosen:updated");
 
@@ -123,18 +125,20 @@ home.controller = function() {
 		var s = '<div id="map0" style="width:80%;height: 400px;background: none;"></div>'
 		$(s).appendTo('.viewcontent');
 
-		setTimeout(function () {
-			var map = L.map('map0',{keyboard: false}).setView([51.505, -0.09], 18);
+		setTimeout(function() {
+			var map = L.map('map0', {
+				keyboard: false
+			}).setView([51.505, -0.09], 18);
 
 			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 				maxZoom: 18
 			}).addTo(map);
-		},1000);
+		}, 1000);
 
 
 
-	},1000);
+	}, 1000);
 
 };
 

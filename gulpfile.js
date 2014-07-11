@@ -283,7 +283,7 @@ gulp.task('update:mobile:android', function(done) {
 });
 
 gulp.task('build:all', function(done) {
-	runSequence('build:web', 'build:mobile',  done);
+	runSequence('build:web', 'build:mobile:all',  done);
 });
 
 gulp.task('run:ios',

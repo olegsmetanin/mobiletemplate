@@ -32,7 +32,9 @@ todo.controller = function() {
 
 	this.add = function(description) {
 		if (description()) {
-			this.list.push(new todo.Todo({description: description()}));
+			this.list.push(new todo.Todo({
+				description: description()
+			}));
 			this.description("");
 		}
 	};

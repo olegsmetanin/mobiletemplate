@@ -49,9 +49,18 @@ var init = function() {
 	var timer;
 	var scroll;
 
+
+
+
+// $('.qwe').on('scroll', function (evt) {
+// 	console.log(evt.target);
+// });
+
 	$('.scroll').on('scroll', function(evt) {
 
 		var trg = evt.target;
+
+		console.log(trg);		
 
 		if (!Modernizr.touch) {
 

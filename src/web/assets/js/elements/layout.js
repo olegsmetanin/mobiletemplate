@@ -18,7 +18,7 @@ layout.view = function(ctrl) {
 			systemBar.view(ctrl.systemBarController),
 			userMenu.view(ctrl.userMenuController), 
 			systemMenu.view(ctrl.systemMenuController),
-			<div class="views" style="">
+			<div class="views qwe" style="">
 				Loading 
 			</div>
 	];
@@ -35,29 +35,53 @@ layout.controller = function() {
 	setTimeout(function() {
 		$('#systemmenu-toggle').on('click', function(event) {
 			var container = $(event.target).parents(".container-xx");
-			container.toggleClass('opensystemmenu');
-			container.removeClass('openusermenu');
+				container.addClass('opensystemmenu');
+				container.removeClass('openview');	
+				container.removeClass('openusermenu');
 		});
 
 		$('#usermenu-toggle').on('click', function(event) {
 			var container = $(event.target).parents(".container-xx");
-			container.toggleClass('openusermenu');
+			container.addClass('openusermenu');
+			container.removeClass('openview');
 			container.removeClass('opensystemmenu');
+
 		});
 
 		$(document).on('click', '.backbutton', function(event) {
 			event.preventDefault();
 			var container = $(event.target).parents(".container-xx");
+			container.addClass('openview');
 			container.removeClass('openusermenu');
 			container.removeClass('opensystemmenu');
 			window.history.back()
 		});
+
+
 	}, 0);
 
 
 	setTimeout(function() {
+		$('.scroll').on('scroll', function (evt) {
+			console.log(evt.target);
+		});
+
 		content($('.views')[0]);
-	}, 100)
+
+	}, 100);
+
+		setTimeout(function() {
+		$('.scroll').on('scroll', function (evt) {
+			console.log(evt.target);
+		});
+
+		$('.scroll').each(function (i,n) {
+			console.log(n);
+		})
+
+	}, 1000)
+
+
 
 };
 

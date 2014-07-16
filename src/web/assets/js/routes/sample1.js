@@ -6,8 +6,8 @@
 
 var m = require('./../components/m/m.js');
 var PubSub = require('./../components/p/p.js');
+var L = require('./../components/l/l.js');
 
-var L = require('leaflet');
 //var $ = require('jquery');
 
 var THREE = require('three');
@@ -30,6 +30,7 @@ sample1.view = function(ctrl) {
 				<div id="asdzxc" class="mapcontainer" >
 					sf,jhsdfjj <br/>
 					sf,jhsdfjj <br/>
+					<input type="text" val="qwe"/>
 					sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>
 					sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>
 					<img src="assets/img/profile-pic.jpg" style="width:80%;height: 400px;"/>
@@ -37,6 +38,7 @@ sample1.view = function(ctrl) {
 					sf,jhsdfjj <br/>
 					sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>
 					sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>		sf,jhsdfjj <br/>
+				<input type="text" val="qwe"/>
 				</div>
 				<div class="map" id="map0" style="width:80%;height: 400px;background: none;-webkit-transform: translate3d(0px,0px,0px);"></div>
 			</div>

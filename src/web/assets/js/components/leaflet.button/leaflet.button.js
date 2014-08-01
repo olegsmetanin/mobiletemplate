@@ -11,7 +11,7 @@ module.exports = function(L) {
 
         onAdd: function(map) {
             this._map = map;
-            var container = L.DomUtil.create('div', 'leaflet-control-button');
+            var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
 
             this._container = container;
 
@@ -23,13 +23,10 @@ module.exports = function(L) {
 
         setButton: function(options) {
             var button = {
-                'text': options.text, //string
-                'iconUrl': options.iconUrl, //string
+                'class': options.class, //string
                 'onClick': options.onClick, //callback function
-                'hideText': !!options.hideText, //forced bool
-                'maxWidth': options.maxWidth || 70, //number
-                'doToggle': options.toggle, //bool
-                'toggleStatus': false //bool
+                'doToggle': options.doToggle, //bool
+                'toggleStatus': options.toggleStatus//bool
             };
 
             this._button = button;
@@ -37,14 +34,6 @@ module.exports = function(L) {
                 this.setPosition(options.position);
             }
             this._update();
-        },
-
-        getText: function() {
-            return this._button.text;
-        },
-
-        getIconUrl: function() {
-            return this._button.iconUrl;
         },
 
         destroy: function() {
@@ -72,23 +61,13 @@ module.exports = function(L) {
         },
 
         _makeButton: function(button) {
-            var newButton = L.DomUtil.create('div', 'leaflet-buttons-control-button', this._container);
+            var newButton = L.DomUtil.create('a', 'leaflet-bar-part', this._container);
+
             if (button.toggleStatus)
-                L.DomUtil.addClass(newButton, 'leaflet-buttons-control-toggleon');
+                L.DomUtil.addClass(newButton, 'active');
 
-            var image = L.DomUtil.create('img', 'leaflet-buttons-control-img', newButton);
-            image.setAttribute('src', button.iconUrl);
-
-            if (button.text !== '') {
-
-                L.DomUtil.create('br', '', newButton); //there must be a better way
-
-                var span = L.DomUtil.create('span', 'leaflet-buttons-control-text', newButton);
-                var text = document.createTextNode(button.text); //is there an L.DomUtil for this?
-                span.appendChild(text);
-                if (button.hideText)
-                    L.DomUtil.addClass(span, 'leaflet-buttons-control-text-hide');
-            }
+            L.DomUtil.create('i', button.class , newButton);
+            newButton.href = '#';
 
             L.DomEvent
                 .addListener(newButton, 'click', L.DomEvent.stop)
@@ -102,9 +81,9 @@ module.exports = function(L) {
         _clicked: function() { //'this' refers to button
             if (this._button.doToggle) {
                 if (this._button.toggleStatus) { //currently true, remove class
-                    L.DomUtil.removeClass(this._container.childNodes[0], 'leaflet-buttons-control-toggleon');
+                    L.DomUtil.removeClass(this._container.childNodes[0], 'active');
                 } else {
-                    L.DomUtil.addClass(this._container.childNodes[0], 'leaflet-buttons-control-toggleon');
+                    L.DomUtil.addClass(this._container.childNodes[0], 'active');
                 }
                 this.toggle();
             }

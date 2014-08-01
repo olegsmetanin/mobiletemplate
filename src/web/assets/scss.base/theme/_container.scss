@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(150, 150, 150, 0);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.container-xx {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container-xx.openview {
+  // -webkit-overflow-scrolling: touch;
+}
+
+// View Bar
+.view-bar {
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+  height: 54px;
+  box-sizing: border-box;
+  z-index: 1002;
+  color:#FFF;
+  line-height: 54px;
+  overflow: hidden;
+  background-color: #2c3e50;
+}
+
+//View Content
+.view-content {
+  margin-top:54px;
+}
+
+
+// System Bar
+.container-xx .systembar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top:0;
+  height: 54px;
+  box-sizing: border-box;
+  z-index: 1001;
+}

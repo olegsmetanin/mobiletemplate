@@ -1,6 +1,4 @@
 /**
- * JSX version of the Mithril Getting Started documentation's TODO example.
- * http://lhorie.github.io/mithril/getting-started.html
  * @jsx m
  */
 

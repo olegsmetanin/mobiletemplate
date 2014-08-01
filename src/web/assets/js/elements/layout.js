@@ -15,10 +15,10 @@ var layout = {};
 layout.view = function(ctrl) {
 	/*jshint ignore:start */
 	return [
-			systemBar.view(ctrl.systemBarController),
-			userMenu.view(ctrl.userMenuController), 
-			systemMenu.view(ctrl.systemMenuController),
-			<div class="views qwe" style="">
+			// systemBar.view(ctrl.systemBarController),
+			// userMenu.view(ctrl.userMenuController), 
+			// systemMenu.view(ctrl.systemMenuController),
+			<div class="views" style="">
 				Loading 
 			</div>
 	];
